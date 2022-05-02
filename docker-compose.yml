@@ -1,0 +1,30 @@
+version: '3'
+
+
+services:
+  postgresql:
+    image: postgres:12
+    container_name: db_postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: user_pg
+      POSTGRES_PASSWORD: 123qwerty
+      POSTGRES_DB: questions
+    ports:
+      - 5432:5432
+    restart: always
+
+  api:
+    build: .
+    container_name: api
+    ports:
+      - 5000:5000
+    depends_on:
+      - postgresql
+    command: >
+      sh -c "python main.py"
+    restart: always
+
+volumes:
+  postgres_data:
