@@ -2,7 +2,7 @@
 
 ![https://img.shields.io/badge/Python-3.8.5-blue](https://img.shields.io/badge/Python-3.8.5-blue)
 ![https://img.shields.io/badge/SQLAlchemy-1.4.36-red](https://img.shields.io/badge/SQLAlchemy-1.4.36-red)
-
+![https://img.shields.io/badge/FastAPI-0.75.2-blue](https://img.shields.io/badge/FastAPI-0.75.2-blue)
 ---
 1. С помощью Docker (предпочтительно - docker-compose) развернуть образ с любой опенсорсной СУБД (предпочтительно - PostgreSQL).
 
